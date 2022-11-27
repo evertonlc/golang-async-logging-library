@@ -43,18 +43,6 @@ func New(w io.Writer) *Alog {
 func (al Alog) Start() {
 
 	wg := new(sync.WaitGroup)
-	//for msg := range al.msgCh {
-	//	select {
-	//	//case <-al.msgCh:
-	//	//	go al.write(msg, nil)
-	//	case <-al.shutdownCh:
-	//		wg.Wait()
-	//		al.shutdown()
-	//		break
-	//	}
-	//	wg.Add(1)
-	//	go al.write(msg, wg)
-	//}
 out:
 	for {
 		select {
